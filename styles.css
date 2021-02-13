@@ -1,0 +1,74 @@
+/* 
+ * Base Styles
+ *
+ */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .current-turn.red,
+.container .current-turn.blue {
+    display: none;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.column {
+    flex-direction: column;
+    margin: 1px;
+}
+
+.square {
+    height: 80px;
+    width: 80px;
+    border: 1px solid grey;
+    margin: 5px;
+}
+
+.circle {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.reset-button {
+    margin-top: 25px;
+}
+
+/* 
+ * Turn Dependent Styles
+ *
+ */
+
+.container.red .current-turn.red {
+    color: red;
+    display: inline-block;
+}
+
+.container.blue .current-turn.blue {
+    color: blue;
+    display: inline-block;
+}
+
+.container.red .column {
+    border: 1px dashed pink;
+}
+
+.container.blue .column {
+    border: 1px dashed lightblue;
+}
+
+.square.red .circle {
+    background-color: red;
+}
+
+.square.blue .circle {
+    background-color: blue;
+}
